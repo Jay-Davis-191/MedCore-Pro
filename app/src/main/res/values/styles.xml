@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="home_page_text">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">50dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="page_title_text">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">40dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <color name="colorPrimary">#FF00A6FF</color>
+    <color name="colorPrimaryDark">#FFFFFFFF</color>
+
+    <style name="regular_text">
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="table_text">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AppTheme.PopUp" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="pop_up_entries">
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".SelectedPatientPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.15"
+                    android:src="@drawable/profile_picture"
+                    android:id="@+id/patient_photo" />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/adminPatientNameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Max Carter"
+                        android:theme="@style/page_title_text"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@null"
+                        />
+
+                    <EditText
+                        android:id="@+id/adminPatientDOBText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DOB: 05/06/1997"
+                        android:theme="@style/regular_text"
+                        android:textColor="@color/white"
+                        android:background="@null"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"/>
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        >
+                        <TextView
+                            android:id="@+id/patientSectionedStatusText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Residential Address: 29 Rudeigin St, Skinnet, Scotland"
+                            android:theme="@style/regular_text"
+                            android:textStyle="bold" />
+                        <EditText
+                            android:id="@+id/adminPatientAddressText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/regular_text"
+                            android:textColor="@color/white"
+                            android:text=""
+                            android:inputType="text"
+                            android:background="@null"
+                            android:minWidth="300dp"
+                            android:textStyle="bold|italic" />
+                    </TableRow>
+
+                    <EditText
+                        android:id="@+id/adminPatientIDText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unique Patient Identifier: 1"
+                        android:theme="@style/regular_text"
+                        android:textColor="@color/white"
+                        android:background="@null"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginLeft="30dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Sectioned/HomeCare status: "
+                    android:theme="@style/regular_text"
+                    />
+                <Spinner
+                    android:id="@+id/adminPatientSectionedSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Schizophrenia, hallucinations, delusions, and extremely disordered thinking"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginLeft="30dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Mental Health Condition(s): "
+                    android:theme="@style/regular_text"
+                    />
+                <EditText
+                    android:id="@+id/adminPatientConditionsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Schizophrenia, hallucinations, delusions, and extremely disordered thinking"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:textStyle="italic"
+                    android:inputType="text"
+                    android:minWidth="300dp"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginLeft="30dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Current Medication: "
+                    android:theme="@style/regular_text" />
+                <EditText
+                    android:id="@+id/adminPatientMedicationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:text="Panadol, Ibuprofen"
+                    android:background="@null" />
+            </TableRow>
+
+            <EditText
+                android:id="@+id/adminPatientVisitationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visitation Percentage: "
+                android:theme="@style/regular_text"
+                android:textColor="@color/white"
+                android:background="@null"
+                android:layout_marginVertical="10dp"
+                android:layout_marginLeft="30dp"/>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginLeft="30dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Next of Kin: "
+                    android:theme="@style/regular_text" />
+                <EditText
+                    android:id="@+id/adminPatientNextOfKinText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Linda Carter"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:textStyle="italic"
+                    android:inputType="text"
+                    android:minWidth="300dp"
+                    android:background="@null" />
+            </TableRow>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Appointments"
+                android:layout_gravity="center"
+                android:theme="@style/regular_text"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:background="@null"
+                android:layout_marginVertical="10dp" />
+
+            <TableLayout
+                android:id="@+id/patientsProfileUpcomingAppointmentsTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp">
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center|bottom"
+        android:layout_margin="10dp" >
+
+        <Button
+            android:id="@+id/selectedPatientAddAppointmentButton"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="Add Appointment"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="10dp"
+            />
+    </TableRow>
+</LinearLayout>

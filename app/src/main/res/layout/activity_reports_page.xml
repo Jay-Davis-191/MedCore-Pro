@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".ReportsPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/page_title_text"
+                android:text="Management Reports"
+                />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Number of Patients: "
+                    android:textStyle="bold"
+                    android:theme="@style/regular_text" />
+                <TextView
+                    android:id="@+id/reportTotalPatients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:text=""
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Number of Sectioned Patients: "
+                    android:theme="@style/regular_text"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/reportTotalSectionedPatients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Number of HomeCared Patients: "
+                    android:theme="@style/regular_text"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/reportTotalHomeCaredPatients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Month and Year: "
+                    android:theme="@style/regular_text"
+                    android:layout_marginRight="10dp"
+                    android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/reportMonthSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="January"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null" />
+                <Spinner
+                    android:id="@+id/reportYearSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2020"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="match_parent"
+                    android:text="Drugs Prescribed: "
+                    android:theme="@style/regular_text"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="match_parent"
+                    android:text="Individual Cost: "
+                    android:theme="@style/regular_text"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="match_parent"
+                    android:text="Total Cost: "
+                    android:theme="@style/regular_text"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" >
+                <TextView
+                    android:id="@+id/reportPrescribedDrugs"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="match_parent"
+                    android:text="- Panadol"
+                    android:theme="@style/regular_text" />
+                <TextView
+                    android:id="@+id/reportDrugCosts"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="match_parent"
+                    android:text="- $10"
+                    android:theme="@style/regular_text" />
+                <TextView
+                    android:id="@+id/reportDrugTotalCosts"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="match_parent"
+                    android:text="- $100"
+                    android:theme="@style/regular_text" />
+            </TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Completed Appointments of all Hospitals for the Selected Year"
+                android:layout_marginTop="20dp"
+                android:theme="@style/regular_text"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/reportBarChart"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

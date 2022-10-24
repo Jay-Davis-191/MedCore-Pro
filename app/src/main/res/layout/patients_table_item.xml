@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_grey"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:id="@+id/patient_id"
+        android:text="ID"
+        android:theme="@style/table_text"
+        android:paddingVertical="10dp"
+        android:gravity="center"
+        android:background="@drawable/table_cells"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="15"
+        android:id="@+id/patient_name"
+        android:text="Patient Name"
+        android:theme="@style/table_text"
+        android:gravity="center"
+        android:background="@drawable/table_cells"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:id="@+id/patient_age"
+        android:text="Age"
+        android:theme="@style/table_text"
+
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:id="@+id/patient_next_appt"
+        android:text="Next Appt"
+        android:theme="@style/table_text"
+        android:gravity="center"
+        android:background="@drawable/table_cells"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="70"
+        android:id="@+id/patient_note"
+        android:text="Notes"
+        android:theme="@style/table_text"
+        android:gravity="center"
+        android:background="@drawable/table_cells"
+        />
+
+</TableRow>

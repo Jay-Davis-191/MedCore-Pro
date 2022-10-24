@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".SelectedStaffPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_height="150dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.15"
+                    android:src="@drawable/profile_picture"
+                    android:id="@+id/patient_photo" />
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/selectedStaffNameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dr Jonathan Pilkington"
+                        android:theme="@style/page_title_text"
+                        android:textColor="@color/white"
+                        android:layout_margin="2dp"
+                        android:background="@null"
+                        />
+
+                    <EditText
+                        android:id="@+id/selectedStaffIDText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unique Staff Identifier: 1"
+                        android:theme="@style/regular_text"
+                        android:textColor="@color/white"
+                        android:background="@null"
+                        android:layout_margin="2dp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginLeft="30dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Occupation: "
+                    android:theme="@style/regular_text" />
+
+                <Spinner
+                    android:id="@+id/selectedStaffOccupationSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doctor"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:layout_margin="2dp"
+                    android:textStyle="bold"/>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginLeft="30dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Salary: $"
+                    android:theme="@style/regular_text" />
+                <EditText
+                    android:id="@+id/selectedStaffSalaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:text="$100,000"
+                    android:textStyle="italic"
+                    android:minWidth="300dp"
+                    android:inputType="text"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginLeft="30dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Hospital: "
+                    android:theme="@style/regular_text" />
+
+                <Spinner
+                    android:id="@+id/selectedStaffHospitalSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hospital"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null"
+                    android:layout_margin="2dp"
+                    android:textStyle="bold"/>
+            </TableRow>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

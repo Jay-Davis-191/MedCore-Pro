@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".AddAppointmentPopUp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Appointment"
+            android:layout_marginTop="30dp"
+            android:theme="@style/pop_up_entries"
+            android:textSize="50dp"
+            android:textAlignment="center"/>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="200dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patient:"
+                    android:theme="@style/pop_up_entries"
+                    android:layout_marginRight="10dp"
+                    android:textAlignment="textEnd"/>
+
+                <Spinner
+                    android:id="@+id/newAppointmentPatientName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:theme="@style/pop_up_entries"
+                    android:textAlignment="center"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="200dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hospital:"
+                    android:theme="@style/pop_up_entries"
+                    android:layout_marginRight="10dp"
+                    android:textAlignment="textEnd"/>
+
+                <Spinner
+                    android:id="@+id/newAppointmentHospitalName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:theme="@style/pop_up_entries"
+                    android:textAlignment="center"/>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="200dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doctor/Nurse:"
+                    android:theme="@style/pop_up_entries"
+                    android:layout_marginRight="10dp"
+                    android:textAlignment="textEnd"/>
+
+                <Spinner
+                    android:id="@+id/newAppointmentDoctorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:theme="@style/pop_up_entries"
+                    android:textAlignment="center"/>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="200dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:theme="@style/pop_up_entries"
+                    android:layout_marginRight="10dp"
+                    android:textAlignment="textEnd"/>
+
+                <Button
+                    android:id="@+id/datePickerButton"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="1 Jan 2020"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    android:background="@color/white"
+                    />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="200dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time:"
+                    android:theme="@style/pop_up_entries"
+                    android:layout_marginRight="10dp"
+                    android:textAlignment="textEnd"/>
+
+                <Button
+                    android:id="@+id/timePickerButton"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="09:00"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    android:background="@color/white"
+                    />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/saveNewAppointmentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginVertical="20dp"
+            android:background="@color/blue"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>
+
+    </ScrollView>

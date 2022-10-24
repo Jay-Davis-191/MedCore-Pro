@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".SelectedMedicationPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/selectedMedicationHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/page_title_text"
+                android:text="Selected Medication"
+                />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Name: "
+                    android:theme="@style/regular_text"
+                    />
+                <TextView
+                    android:id="@+id/selectedMedicationNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:theme="@style/regular_text"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Medication ID: "
+                    android:theme="@style/regular_text"
+                    />
+                <TextView
+                    android:id="@+id/selectedMedicationIDText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Quantity in each Supply (Tablets): "
+                    android:textStyle="italic"
+                    android:theme="@style/regular_text" />
+                <EditText
+                    android:id="@+id/selectedMedicationVolumeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:inputType="number"
+                    android:text=""
+                    android:textStyle="italic"
+                    android:minWidth="300dp"
+                    android:maxWidth="400dp"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Cost: $"
+                    android:theme="@style/regular_text"
+                    android:textStyle="italic" />
+                <EditText
+                    android:id="@+id/selectedMedicationCostText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:inputType="number"
+                    android:textStyle="italic"
+                    android:minWidth="300dp"
+                    android:maxWidth="400dp"
+                    android:text=""
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Notes: "
+                    android:theme="@style/regular_text"
+                    android:textStyle="italic" />
+                <EditText
+                    android:id="@+id/selectedMedicationNotesText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:text=""
+                    android:textStyle="italic"
+                    android:minWidth="300dp"
+                    android:inputType="text"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Prescribed Patients: "
+                    android:theme="@style/regular_text"
+                    />
+                <TextView
+                    android:id="@+id/selectedMedicationPrescribedPatientsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:minLines="1"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Administered Doctors: "
+                    android:theme="@style/regular_text"
+                    />
+                <TextView
+                    android:id="@+id/selectedMedicationAdministeredDoctorsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:minLines="1"
+                    android:background="@null" />
+            </TableRow>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

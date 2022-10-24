@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".SelectedMedicationPage"
+            android:label="Chosen Medication"
+            android:screenOrientation="sensorLandscape"
+            android:exported="false" />
+        <activity
+            android:name=".AddMedicationPopUp"
+            android:label="New Medication"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme.PopUp"
+            android:exported="false" />
+        <activity
+            android:name=".AddStaffPopUp"
+            android:exported="false"
+            android:label="New Staff Member"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme.PopUp" />
+        <activity
+            android:name=".SelectedStaffPage"
+            android:exported="false"
+            android:label="Staff Profile"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".AddPatient"
+            android:exported="false"
+            android:label="New Patient"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme.PopUp" />
+        <activity
+            android:name=".SelectedAppointmentPage"
+            android:exported="false"
+            android:label="Chosen Appointment"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".ReportsPage"
+            android:exported="false"
+            android:label="Reports"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".StaffPage"
+            android:exported="false"
+            android:label="Staff Members"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".MedicationPage"
+            android:exported="false"
+            android:label="Medication"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".AppointmentsPage"
+            android:exported="false"
+            android:label="Appointments"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".AddAppointmentPopUp"
+            android:exported="false"
+            android:label="New Appointment"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppTheme.PopUp" />
+        <activity
+            android:name=".SelectedPatientPage"
+            android:exported="false"
+            android:label="Chosen Patient"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".HomePageAdmin"
+            android:exported="false"
+            android:label="Home Page - Admin"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".PatientsPage"
+            android:exported="false"
+            android:label="Patients"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".HomePageStaff"
+            android:exported="false"
+            android:label="Home Page - User"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".LoginPage"
+            android:exported="true"
+            android:label="Login"
+            android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

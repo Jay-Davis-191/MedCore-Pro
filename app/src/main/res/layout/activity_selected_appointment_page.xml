@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".SelectedAppointmentPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/selectedAppointmentHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/page_title_text"
+                android:text="Selected Appointment"
+                />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Completed/Missed status: "
+                    android:theme="@style/regular_text"
+                    />
+                <Spinner
+                    android:id="@+id/selectedAppointmentStatusSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Neither"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Time/Date: "
+                    android:theme="@style/regular_text"
+                    android:gravity="center_vertical"
+                    />
+
+                <Button
+                    android:id="@+id/selectedAppointmentTimeButton"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="09:00 AM"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    android:background="@android:color/transparent"
+                    />
+
+                <Button
+                    android:id="@+id/selectedAppointmentDateButton"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="1 Jan 2020"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:textStyle="italic"
+                    android:background="@android:color/transparent"                    />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Patient ID: "
+                    android:theme="@style/regular_text"
+                    />
+                <TextView
+                    android:id="@+id/selectedAppointmentPatientIDText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Patient Name: "
+                    android:theme="@style/regular_text"
+                    />
+                <TextView
+                    android:id="@+id/selectedAppointmentPatientNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Staff ID: "
+                    android:theme="@style/regular_text" />
+                <TextView
+                    android:id="@+id/selectedAppointmentDoctorIDText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:text=""
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Staff Name: "
+                    android:theme="@style/regular_text" />
+
+                <Spinner
+                    android:id="@+id/selectedAppointmentDoctorNameSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Doctor Name"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Hospital: "
+                    android:theme="@style/regular_text" />
+                <TextView
+                    android:id="@+id/selectedAppointmentHospitalNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:text=""
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Hospital Address: "
+                    android:theme="@style/regular_text" />
+                <TextView
+                    android:id="@+id/selectedAppointmentHospitalAddressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:text=""
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Medication: "
+                    android:theme="@style/regular_text" />
+
+                <Spinner
+                    android:id="@+id/selectedAppointmentMedicationNameSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Medication Name"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Medication Cost: "
+                    android:theme="@style/regular_text" />
+                <TextView
+                    android:id="@+id/selectedAppointmentMedicationCostText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:text=""
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Prescription Description: "
+                    android:theme="@style/regular_text" />
+                <EditText
+                    android:id="@+id/selectedAppointmentPrescriptionDescriptionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:minWidth="300dp"
+                    android:text=""
+                    android:textStyle="italic"
+                    android:inputType="text"
+                    android:background="@null" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Notes: "
+                    android:theme="@style/regular_text" />
+                <EditText
+                    android:id="@+id/selectedAppointmentAppointmentNotesText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/regular_text"
+                    android:textColor="@color/white"
+                    android:text=""
+                    android:minWidth="300dp"
+                    android:textStyle="italic"
+                    android:inputType="text"
+                    android:background="@null" />
+            </TableRow>
+        </LinearLayout>
+    </ScrollView>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center|bottom"
+        android:layout_margin="10dp" >
+
+        <Button
+            android:id="@+id/selectedPatientDeleteAppointmentButton"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="Delete Appointment"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="10dp"
+            />
+    </TableRow>
+
+</LinearLayout>

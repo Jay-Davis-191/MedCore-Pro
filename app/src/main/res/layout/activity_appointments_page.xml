@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".AppointmentsPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="textStart"
+                android:text="Appointments"
+                android:theme="@style/page_title_text"
+                android:layout_marginBottom="10dp"
+                />
+
+            <EditText
+                android:id="@+id/appointmentsPageSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:theme="@style/regular_text"
+                android:textAlignment="textEnd"
+                android:hint="Name Search"
+                android:paddingRight="10dp"
+                android:textStyle="italic"
+                android:inputType="text"
+                android:background="@color/white"
+                />
+
+        </LinearLayout>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="20dp" >
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="0.25">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Name"
+                    android:theme="@style/regular_text"
+                    />
+
+                <Spinner
+                    android:id="@+id/appointmentsPatientNameSort"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="NestedWeights"
+                    android:background="@color/white"
+                    android:layout_marginRight="25dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="0.25">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:theme="@style/regular_text"
+                    />
+
+                <Spinner
+                    android:id="@+id/appointmentsDateFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="NestedWeights"
+                    android:background="@color/white"
+                    android:layout_marginRight="25dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="0.25">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Administered By"
+                    android:theme="@style/regular_text"
+                    />
+
+                <Spinner
+                    android:id="@+id/appointmentsDoctorFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="NestedWeights"
+                    android:background="@color/white"
+                    android:layout_marginRight="25dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="0.25">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Previous Appts"
+                    android:theme="@style/regular_text"
+                    />
+
+                <Spinner
+                    android:id="@+id/appointmentsPreviousFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="NestedWeights"
+                    android:background="@color/white"
+                    android:layout_marginRight="25dp"
+                    />
+            </LinearLayout>
+
+        </TableRow>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            android:layout_weight="1" >
+            <TableLayout
+                android:id="@+id/appointmentsTableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9">
+            </TableLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/addAppointmentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Appointment"
+            android:theme="@style/regular_text"
+            android:layout_gravity="center|bottom"
+            android:textStyle="bold"
+
+        />
+
+    </LinearLayout>
+</LinearLayout>
