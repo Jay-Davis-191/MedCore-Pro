@@ -36,15 +36,11 @@ public class LoginPage extends AppCompatActivity {
         passwordEditText = findViewById(R.id.passwordEditText);
         loginPrompt = findViewById(R.id.loginPrompt);
 
-        Database.appDatabase = openOrCreateDatabase("app database", Context.MODE_PRIVATE, null);
         //try {
         //    SQLQueries.testDatabase();
         //} catch (SQLException throwables) {
         //    throwables.printStackTrace();
         //}
-
-        Database.createEntities();
-        //Database.insertInitialData();
 
         loginButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -106,7 +102,6 @@ public class LoginPage extends AppCompatActivity {
 
     private String retrieveNextActivity() {
         String nextActivity = "";
-        appDetails = getSharedPreferences("appDetails", Context.MODE_PRIVATE);
 
         if (accountType.equals("Administrator") || accountType.equals("Receptionist") || accountType.equals("Doctor")) {
             nextActivity = "HomeAdmin";
@@ -127,5 +122,13 @@ public class LoginPage extends AppCompatActivity {
 
         usernameEditText.setText("jdavis");
         passwordEditText.setText("testpassword1");
+
+        appDetails = getSharedPreferences("appDetails", Context.MODE_PRIVATE);
+        Database.appDatabase = openOrCreateDatabase("app database", Context.MODE_PRIVATE, null);
+        Database.createEntities();
+        if (appDetails.getBoolean("dataInserted", false) == false) {
+            Database.insertInitialData();
+            appDetails.edit().remove("dataInserted").putBoolean("dataInserted", true).apply();
+        }
     }
 }
