@@ -3,13 +3,17 @@
 ## Description
 This project is an Android app that is intended for hospital use for monitoring and managing patients. Initially created for patients with mental health conditions, this app helps staff keep track of patients, staff, medications and other hospitals utilising this app. 
 
-## Development
+This project was assigned by James Cook University as part of my Bachelor of Information Technlogy degree during the second semester of my second year. 
+
+## Development and Timeframe
 This app is solely intended for Android use and utilises a local database solely due to time and expense restrictions. Originally, the problem was for Android devices but this was changed after the prototype was provided due to conveniency on the client's end. 
 
 For the future, the next stages of development for the app is to:
 1. Convert it to cross-platform. 
 2. Incorporate a cloud-database provider (AWS, Firebase, etc.) 
 3. Improve design by creating a crisper and colourful/professional look.
+
+The timeframe it took for this app was from mid-July to early-December with 1 month planning, 1 month prototyping and refining, 2 months coding and half a month for the report (which can be viewed on the LinkedIn link below). 
 
 ## How to run
 1. Open the app with Android Studio. 
