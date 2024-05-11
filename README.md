@@ -1,4 +1,4 @@
-# Hospital Management App
+# MedCore Pro
 
 ## Description
 This project is an Android app that is intended for hospital use for monitoring and managing patients. Initially created for patients with mental health conditions, this app helps staff keep track of patients, appointments, medications and other staff members. This app can track and help manage other hospitals that use this app. 
